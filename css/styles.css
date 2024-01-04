@@ -19,7 +19,8 @@ img {
 
 .gallery {
   max-width: 1440px;
-  padding: 100px 156px;
+  padding-left: 156px;
+  padding-right: 156px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
