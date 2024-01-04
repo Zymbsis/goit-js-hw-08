@@ -94,9 +94,11 @@ gallery.onclick = (e) => {
   );
   instance.show();
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
+  const handleKeydown = (e) => {
+    if (e.key === 'Escape' && instance.visible()) {
       instance.close();
+      document.removeEventListener('keydown', handleKeydown);
     }
-  });
+  };
+  document.addEventListener('keydown', handleKeydown);
 };
